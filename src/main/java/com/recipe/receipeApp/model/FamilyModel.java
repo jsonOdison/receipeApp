@@ -1,5 +1,6 @@
 package com.recipe.receipeApp.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -12,7 +13,9 @@ public class FamilyModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "family_id")
     private long familyId;
+    @Column(name = "family_name")
     private String familyName;
 
     public long getFamilyId() {

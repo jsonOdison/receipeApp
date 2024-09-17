@@ -25,12 +25,12 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @PostMapping("/getUser")
+    @GetMapping("/getUser")
     public Optional<UserModel> getUser(long userId) {
         return userService.getUser(userId);
     }
 
-    @GetMapping("/createUser")
+    @PostMapping("/createUser")
     public UserModel createUser(@RequestBody UserModel model) {
         return userService.createUser(model);
     }
